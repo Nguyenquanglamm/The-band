@@ -16,9 +16,7 @@ html{
     4.kiểu dáng(kiểu chữ ,hình thù,...)  ?
 */
 /* Common */
-.clear{
-    clear: both;
-}
+
 
 .text-white{
     color: #fff !important;
@@ -88,10 +86,10 @@ html{
 #main{
 
 }
-#header{
+/* #header{
 height: 46px;
 background-color: #000;
-}
+} */
 
 /* reset css */
 * {
@@ -113,13 +111,14 @@ html{
 
 }
 #header{
-height: 46px;
-background-color: #000;
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 46px;
+    background-color: #000;
+    z-index: 1;
+    /* overflow: hidden; */
 }
 
 #navigation{
@@ -147,7 +146,7 @@ z-index: 1;
     text-decoration: none;
     line-height: 46px;
     padding: 0 24px;
-    display: inline-block;
+    display: block;
 }
 
 #navigation li:hover .subnav{
@@ -186,12 +185,14 @@ z-index: 1;
     float: right;
     
 }
+
+
 #header .search-btn:hover{
+    cursor: pointer;
     background: #f44336;
 }
 
 #header .search-icon{
-    cursor: pointer;
     color: #fff;
     font-size: 20px;
     line-height: 46px;
@@ -230,9 +231,12 @@ z-index: 1;
 
 #content .content-section{
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding: 64px 0;
+    padding: 46px 0;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .section-heading{
@@ -258,7 +262,7 @@ z-index: 1;
 }
 
 #content .team-list{
-    padding: 48px 0;
+    padding: 32px 0;
 }
 
 #content .team-name{
@@ -500,3 +504,5 @@ z-index: 1;
         transform: translateY(0);
     }
 }
+
+

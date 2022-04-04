@@ -1,0 +1,85 @@
+/* tablet */
+@media(max-width:1023px)and(min-width:740px) {
+
+}
+
+/* mobile */
+@media(max-width:739px){
+    .s-full-wight{
+        width: 100% !important;
+    }
+
+    .s-col-full{
+        width: 100% !important;
+    }
+
+    .s-mt-8{
+        margin-top: 8px !important;
+    }
+
+    #header{
+        overflow: hidden;
+    }
+    
+    #header .search-btn{
+        display: none;
+    }
+    
+    #header .menu-mobile-btn{
+        float: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    #header .menu-mobile-btn:hover{
+        background-color: #ccc;
+    }
+
+    #header .menu-mobile-btn:hover .menu-icon{
+        color: #000;
+    }
+    #header .menu-icon{
+        color: #fff;
+        font-size: 20px;
+        line-height: 46px;
+        padding: 0 21px;
+    }
+
+    #navigation{
+        display: block;
+        
+        
+    }
+    
+    #navigation > li:first-child{
+        display: inline-block;
+    }
+    
+    #navigation > li{
+        display: block;
+    }
+
+    #navigation li a {
+        padding:  1px 24px;
+    }
+
+    #navigation .subnav{
+        position: initial;
+        background-color: #333;
+    }
+    
+    #navigation .subnav a {
+        color: #fff;
+        padding:  5px 42px;
+    }
+
+    #content .team-img{
+        width: 60%;
+    }
+
+    .contact-form{
+        margin-top: 16px;
+    }
+    
+}

@@ -7,6 +7,7 @@
     <title>The Band</title>
     <link rel="icon" href="https://vi.seaicons.com/wp-content/uploads/2017/03/garage-band-icon-1.png" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -35,6 +36,10 @@
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
+
+            <div id="menu-mobile" class="menu-mobile-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
             <!-- End : search button -->
 
 
@@ -56,15 +61,15 @@
                     We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <div class="row team-list">
-                    <div class="col col-third text-center ">
+                    <div class="col col-third s-col-full mt-16 text-center ">
                         <p class="team-name">Name</p>
                         <img src="/assets/img/team.jpg" alt="Name" class="team-img">
                     </div>
-                    <div class="col col-third text-center ">
+                    <div class="col col-third s-col-full mt-16 text-center ">
                         <p class="team-name">Name</p>
                         <img src="/assets/img/team.jpg" alt="Name" class="team-img">
                     </div>
-                    <div class="col col-third text-center ">
+                    <div class="col col-third s-col-full mt-16 text-center ">
                         <p class="team-name">Name</p>
                         <img src="/assets/img/team.jpg" alt="Name" class="team-img">
                     </div>
@@ -83,31 +88,31 @@
                     </ul>
                     <!-- places -->
                     <div class="row place-list">
-                        <div class="col col-third">
+                        <div class="col col-third s-col-full mt-16">
                             <img src="/assets/img/newyork.jpg" alt="New Your" class="place-img">
                             <div class="place-body">
                                 <h2 class="place-heading">New Your</h2>
                                 <div class="place-time">Fri 27 Nov 2016</div>
                                 <div class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                                <button href="#" class="btn js-buy-ticket">Buy Tickets</button>
+                                <button href="#" class="btn s-full-wight js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col col-third">
+                        <div class="col col-third s-col-full mt-16">
                             <img src="/assets/img/paris.jpg" alt="New Your" class="place-img">
                             <div class="place-body">
                                 <h2 class="place-heading">New Your</h2>
                                 <div class="place-time">Fri 27 Nov 2016</div>
                                 <div class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                                <button href="#" class="btn js-buy-ticket">Buy Tickets</button>
+                                <button href="#" class="btn s-full-wight js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col col-third">
+                        <div class="col col-third s-col-full mt-16">
                             <img src="/assets/img/sanfran.jpg" alt="New Your" class="place-img">
                             <div class="place-body">
                                 <h2 class="place-heading">New Your</h2>
                                 <div class="place-time">Fri 27 Nov 2016</div>
                                 <div class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                                <button href="#" class="btn js-buy-ticket">Buy Tickets</button>
+                                <button href="#" class="btn s-full-wight js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                     </div>
@@ -119,18 +124,18 @@
                 <p class="section-sub-heading">Fan? Drop a note!</p>
 
                 <div class="row contact-content">
-                    <div class="col col-two contact-info">
+                    <div class="col col-two s-col-full contact-info">
                         <p><i class="ti-location-pin"> Chicago, US</i></p>
                         <p><i class="ti-mobile"> Phone: +00 151515</i></p>
                         <p><i class="ti-email"> Email: mail@mail.com</i></p>
                     </div>
-                    <div class="col col-two contact-form">
+                    <div class="col col-two s-col-full contact-form">
                         <form action="">
                             <div class="row">
-                                <div class="col col-two">
+                                <div class="col s-col-full col-two">
                                     <input required type="text" name="" placeholder="Name" class="form-control">
                                 </div>
-                                <div class="col col-two">
+                                <div class="col s-col-full col-two s-mt-8">
                                     <input required type="email" name="" placeholder="Email" class="form-control">
                                 </div>
                             </div>
@@ -139,7 +144,7 @@
                                     <input type="text" name="" placeholder="Message" class="form-control">
                                 </div>
                             </div>
-                            <input class="btn float-right mt-16 " type="submit" value="SEND">
+                            <input class="btn float-right mt-16 s-full-wight " type="submit" value="SEND">
                         </form>
                     </div>
                 </div>
@@ -196,6 +201,40 @@
         </div>
     </div>
 
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('menu-mobile');
+        var headerHeight = header.clientHeight;
+
+        //đóng mở mobile menu
+        mobileMenu.onclick = function(){
+            var isclose = header.clientHeight === headerHeight;
+            if(isclose){
+                header.style.height = 'auto';
+            }
+            else{
+                header.style.height = null ;
+            }
+        }
+
+        //Tự động đóng khi chọn menu
+        var menuItems = document.querySelectorAll('#navigation li a[href*="#"]');
+        for(var i =0;i<menuItems.length;i++){
+            var menuItem = menuItems[i];
+
+             menuItem.onclick =function(event) {
+                 var isParenMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                 if (isParenMenu){
+                    event.preventDefault();
+                 }else{
+
+                     header.style.height = null;
+                 }
+             }
+        }
+    </script>
+
+ <!-- mua vé  -->
     <script>
         const buyBtns = document.querySelectorAll(".js-buy-ticket")
         const modal = document.querySelector('.js-modal')
